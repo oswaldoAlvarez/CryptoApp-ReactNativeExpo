@@ -1,32 +1,34 @@
-import { Link, Stack } from 'expo-router';
-import { StyleSheet } from 'react-native';
-
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+import { TextView } from "@/components";
+import { styles } from "@/styles/+not-found";
+import { Stack, useRouter } from "expo-router";
+import { useTranslation } from "react-i18next";
+import { Pressable, View } from "react-native";
 
 export default function NotFoundScreen() {
+  const router = useRouter();
+  const { t } = useTranslation();
+
+  const handleBack = () => router.back();
+
   return (
-    <>
-      <Stack.Screen options={{ title: 'Oops!' }} />
-      <ThemedView style={styles.container}>
-        <ThemedText type="title">This screen does not exist.</ThemedText>
-        <Link href="/" style={styles.link}>
-          <ThemedText type="link">Go to home screen!</ThemedText>
-        </Link>
-      </ThemedView>
-    </>
+    <View style={styles.container}>
+      <Stack.Screen
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <TextView textStyles={styles.oops}>Oops!</TextView>
+      <TextView textStyles={styles.title}>{t("page_not_found")}</TextView>
+      <TextView textStyles={styles.message}>
+        {t("page_not_found_description")}
+      </TextView>
+
+      <Pressable onPress={handleBack} style={styles.button}>
+        <TextView textStyles={styles.buttonText}>
+          {t("page_not_found_text_button")}
+        </TextView>
+      </Pressable>
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
-  },
-});

@@ -1,0 +1,22 @@
+{
+  "spanish": "Spanish",
+  "english": "English",
+  "page_not_found": "404 - Page not found",
+  "page_not_found_description": "Sorry, the route you're looking for doesn't exist or has been moved.",
+  "page_not_found_text_button": "Return",
+  "dark_mode": "Dark mode",
+  "email": "Email",
+  "password": "Password",
+  "tabbar": {
+    "home_title": "Home"
+  },
+  "setting_title": "Settings",
+  "settings": {
+    "account_title": "Account",
+    "notification_title": "Notifications",
+    "appearance_title": "Appearance",
+    "privacy_security_title": "Privacy & Security",
+    "language_title": "Language:",
+    "league_participants": "Participants: {{participants}}"
+  }
+}

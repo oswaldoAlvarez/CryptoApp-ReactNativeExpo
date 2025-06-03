@@ -1,0 +1,22 @@
+{
+  "spanish": "Español",
+  "english": "Inglés",
+  "page_not_found": "404 - Página no encontrada",
+  "page_not_found_description": "Lo sentimos, la ruta que buscas no existe o ha sido movida.",
+  "page_not_found_text_button": "Volver",
+  "dark_mode": "Modo oscuro",
+  "email": "Correo electrónico",
+  "password": "Contraseña",
+  "tabbar": {
+    "home_title": "Inicio"
+  },
+  "setting_title": "Ajustes",
+  "settings": {
+    "account_title": "Cuenta",
+    "notification_title": "Notificaciones",
+    "appearance_title": "Apariencia",
+    "privacy_security_title": "Privacidad y seguridad",
+    "language_title": "Idioma:",
+    "league_participants": "Participantes: {{participants}}"
+  }
+}
