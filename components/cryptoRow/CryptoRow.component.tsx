@@ -19,6 +19,7 @@ export const CryptoRow = React.memo(function CryptoRow({
   index,
 }: ICryptoRow) {
   const { colors } = useTheme();
+  //   const { data } = useCoinBaseInfo(item.base);
   //   const setSelectedCrypto = useCryptoStore((state) => state.setSelectedCrypto);
   const router = useRouter();
 
@@ -38,11 +39,13 @@ export const CryptoRow = React.memo(function CryptoRow({
         title: `${item.base}/${item.target}`,
         volume24h: String(item.volume),
         lastPrice: String(item.last),
+        coinId: item.coin_id,
+        target: item.target,
       },
     });
   };
 
-  console.log("cryptorow rendered");
+  //   console.log(JSON.stringify(data, 0, 4));
 
   return (
     <TouchableOpacity
@@ -52,6 +55,11 @@ export const CryptoRow = React.memo(function CryptoRow({
       onPress={handlePress}
     >
       <View style={{ flexDirection: "row" }}>
+        {/* <Image
+          source={{ uri: data?.image?.small }}
+          style={{ width: 40, height: 40, marginRight: 12 }}
+          resizeMode="contain"
+        /> */}
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <TextView textStyles={styles.ticker}>{item.base}</TextView>
           <TextView textStyles={[styles.ticker, { fontWeight: "bold" }]}>
@@ -64,7 +72,7 @@ export const CryptoRow = React.memo(function CryptoRow({
           textStyles={[styles.price, { color: priceColor }]}
           align="flex-end"
         >
-          {formattedAmount(+price)}
+          {formattedAmount(+price)} {item.target}
         </TextView>
         <TextView textStyles={styles.info} align="flex-end">
           Vol 24h: {formatLargeNumber(volume)}

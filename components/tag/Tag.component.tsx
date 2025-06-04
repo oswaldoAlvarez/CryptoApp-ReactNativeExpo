@@ -9,7 +9,7 @@ import { TextView } from "../textView/TextView.component";
 import { styles } from "./Tag.styles";
 
 export type ITag = {
-  label: string;
+  label: React.ReactNode;
   onPress?: (event: GestureResponderEvent) => void;
   containerStyle?: ViewStyle;
   textStyle?: TextStyle;

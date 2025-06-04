@@ -60,7 +60,7 @@ export const useCoinGeckoInfo = () => {
   });
 
   return {
-    data: data ?? { name: "", tickers: [] }, // default value: objeto con tickers vacío
+    data: data ?? { name: "", tickers: [] },
     loading: isLoading,
     isError,
     error,
