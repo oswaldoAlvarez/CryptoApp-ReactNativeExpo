@@ -34,7 +34,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
  ```bash
     rm -rf node_modules .expo .expo-shared .next .cache
-    rm -f package-lock.json yarn.lock
+    rm -f package-lock.json
     npm i
     npx expo start -c
    ```
