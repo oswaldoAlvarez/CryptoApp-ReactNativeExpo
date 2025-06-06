@@ -8,4 +8,14 @@ export const styles = StyleSheet.create({
   tag: {
     marginRight: 8,
   },
+  icon: {
+    marginLeft: 4,
+  },
+  title: {
+    fontSize: 14,
+  },
+  labelTagContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
 });

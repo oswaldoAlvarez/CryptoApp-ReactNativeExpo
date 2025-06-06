@@ -1,7 +1,5 @@
-// src/api/axiosInstance.ts
 import axios from "axios";
 
-// ¡Sin baseURL! Solo headers y timeout.
 export const axiosInstance = axios.create({
   headers: {
     "User-Agent":
