@@ -1,5 +1,10 @@
 # Welcome to your Expo app 👋
 
+![demo1](https://github.com/user-attachments/assets/0b22df1c-2160-4c07-8a65-ebef73a0b3c9)
+![demo2](https://github.com/user-attachments/assets/b9337075-a8e4-4903-9446-75dbf4512052)
+![demo3](https://github.com/user-attachments/assets/e26305bc-dfba-4358-826f-59e2b567a039)
+![demo4](https://github.com/user-attachments/assets/3558ab8f-0ec9-49b3-b3c6-94e5104017a4)
+
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
@@ -13,10 +18,37 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 2. Start the app
 
    ```bash
-   npx expo start
+    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. If you want start with IOS o androd:
+
+   ```bash
+    -npx expo start
+    -Select Metro
+    -Press i for IOS
+    -Press a for Android
+   ```
+
+4 - if you have problem with the libraries:
+
+ ```bash
+    rm -rf node_modules .expo .expo-shared .next .cache
+    rm -f package-lock.json yarn.lock
+    npm i
+    npx expo start -c
+   ```
+
+design used to replicate [Design](https://www.figma.com/community/file/1380191315027391275/crypto-exchange-ui-design-kit)
+design used to replicate [Design](https://www.figma.com/design/AwbKZk3zrgK513O40t8V1c/Crypto-Exchange-UI-Design-Kit--Community-?node-id=2704-418&p=f&t=ZTlIDnEOUHV4FQhJ-0)
+
+## Technical decisions
+
+- Zustand was used as a global state manager for its simplicity.
+- Two eventEmitters were created for real-time socket data.
+- Login creation is missing.
+- It has Spanish-English translations and dark mode.
+- All changes can be view in (main) branch.
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
