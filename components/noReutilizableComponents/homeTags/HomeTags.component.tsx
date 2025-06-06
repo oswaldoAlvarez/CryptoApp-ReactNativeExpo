@@ -79,7 +79,11 @@ export const HomeTags = ({
   ];
 
   return (
-    <ScrollView horizontal style={styles.tagContainer}>
+    <ScrollView
+      horizontal
+      style={styles.tagContainer}
+      showsHorizontalScrollIndicator={false}
+    >
       {tagConfigs.map(({ key, title, onPress, active }) => (
         <Tag
           containerStyle={styles.tag}
