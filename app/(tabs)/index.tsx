@@ -1,4 +1,5 @@
 import { MainContainer, TextView } from "@/components";
+import { styles } from "@/styles/(tabs)/index.styles";
 import { useTranslation } from "react-i18next";
 import { Image, ScrollView, View } from "react-native";
 
@@ -8,23 +9,27 @@ export default function HomeScreen() {
   return (
     <MainContainer>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <TextView
-          textStyles={{
-            marginTop: 32,
-            fontSize: 48,
-            fontWeight: "600",
-            marginBottom: 20,
-          }}
-        >
-          Today Cryptocurrency prices
+        <TextView textStyles={styles.title}>{t("home.first_title")}</TextView>
+        <TextView textStyles={styles.subtitle}>
+          {t("home.first_subtitle")}{" "}
         </TextView>
-        <TextView textStyles={{ fontSize: 18 }}>
-          The global crypto market cap is $1.999.999
+        <View style={styles.img}>
+          <Image
+            source={require("../../assets/images/home.png")}
+            style={styles.firstImgSize}
+            resizeMode="cover"
+          />
+        </View>
+        <TextView textStyles={styles.title} align="center">
+          {t("home.second_title")}
         </TextView>
-        <View style={{ alignItems: "center", marginTop: 30 }}>
+        <TextView textStyles={styles.subtitle}>
+          {t("home.second_subtitle")}
+        </TextView>
+        <View style={styles.img}>
           <Image
             source={require("../../assets/images/orderbook.png")}
-            style={{ width: 250, height: 350 }}
+            style={styles.secondImgSize}
             resizeMode="cover"
           />
         </View>

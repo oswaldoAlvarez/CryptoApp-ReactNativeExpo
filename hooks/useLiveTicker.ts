@@ -1,4 +1,4 @@
-import { tickerEmitter } from "@/utils/tickerEmitter";
+import { tickerEmitter } from "@/services/tickerEmitter";
 import { useEffect, useRef, useState } from "react";
 
 export function useLiveTicker(
@@ -20,7 +20,7 @@ export function useLiveTicker(
             queuedRef.current = null;
           }
           throttleRef.current = null;
-        }, 250);
+        }, 0);
       }
     }
     tickerEmitter.on(symbol, handler);

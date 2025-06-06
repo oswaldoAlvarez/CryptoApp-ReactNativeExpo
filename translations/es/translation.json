@@ -18,5 +18,26 @@
     "privacy_security_title": "Privacidad y seguridad",
     "language_title": "Idioma:",
     "league_participants": "Participantes: {{participants}}"
+  },
+  "home": {
+    "first_title": "Visualiza el precio de las criptomonedas hoy",
+    "first_subtitle": "La capitalización del mercado global de criptomonedas es de $1.999.999",
+    "second_title": "Aprende y gana",
+    "second_subtitle": "Stocks es una biblioteca de bloques de contenido apilables, lista para producción, desarrollada en React Native."
+  },
+  "orderbook": {
+    "placeholder_title": "Buscar criptomoneda...",
+    "all_tag_title": "Todos",
+    "name_tag_title": "Nombre",
+    "price_tag_title": "Precio",
+    "empty_list": "No hay monedas que coincidan con tu búsqueda.",
+    "favorites_tag_title": "Favoritos",
+    "empty_favorites": "No tienes favoritos guardados"
+  },
+  "cryptodetail": {
+    "vol_24h": "Volumen en 24h",
+    "24h_change": "Cambio en 24h",
+    "24h_low": "Más bajo en 24h",
+    "24h_high": "Más alto en 24h"
   }
 }

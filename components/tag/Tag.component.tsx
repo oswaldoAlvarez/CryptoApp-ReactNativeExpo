@@ -27,7 +27,10 @@ export const Tag = ({
     <TouchableOpacity
       style={[
         styles.container,
-        { borderColor: dark ? "white" : "black" },
+        {
+          borderColor: dark ? "white" : "lightgray",
+          backgroundColor: dark ? "black" : "white",
+        },
         containerStyle,
       ]}
       activeOpacity={0.7}

@@ -51,7 +51,7 @@ const fetchCoinGecko = async (): Promise<CoinGeckoExchangeTickersResponse> => {
 };
 
 export const useCoinGeckoInfo = () => {
-  const { data, isLoading, isError, error } = useQuery<
+  const { data, isLoading, isError, error, refetch } = useQuery<
     CoinGeckoExchangeTickersResponse,
     Error
   >({
@@ -64,5 +64,6 @@ export const useCoinGeckoInfo = () => {
     loading: isLoading,
     isError,
     error,
+    refetch,
   };
 };

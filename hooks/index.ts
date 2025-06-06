@@ -1,9 +1,7 @@
-export { useCoinGeckoInfo } from "./useCoinGeckoInfo";
-// export { useKlineDataSocket } from "./useKlineDataSocket";
-// export { usePairsDataSocket } from "./usePairsDataSocket";
 export { useCoinBaseInfo } from "./useCoinBaseInfo";
-export { useCoinGeckoToStore } from "./useCoinGeckoToStore";
+export { useCoinGeckoInfo } from "./useCoinGeckoInfo";
 export { useFilteredOrderbook } from "./useFilteredOrderbook";
+export { useKlineChartData } from "./useKlineChartData";
 export { useLiveTicker } from "./useLiveTicker";
 export { useNavigator } from "./useNavigator";
 export { usePriceFlashColor } from "./usePriceFlashColor";

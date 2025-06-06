@@ -11,12 +11,29 @@ export interface CoinGeckoCoinData {
     large: string;
   };
   market_data: {
-    market_cap: { [key: string]: number };
-    current_price: { [key: string]: number };
-    high_24h: { [key: string]: number };
-    low_24h: { [key: string]: number };
+    market_cap: Record<string, number>;
+    current_price: Record<string, number>;
+    high_24h: Record<string, number>;
+    low_24h: Record<string, number>;
+    price_change_24h: number;
+    price_change_percentage_24h: number;
+    total_volume: Record<string, number>;
   };
 }
+
+const emptyData = {
+  name: "",
+  image: {
+    small: "https://cdn-icons-png.flaticon.com/512/5978/5978100.png",
+  },
+  market_data: {
+    price_change_24h: 0,
+    price_change_percentage_24h: 0,
+    low_24h: { usd: "" },
+    high_24h: { usd: "" },
+    total_volume: { usd: "" },
+  },
+};
 
 const fetchCoinData = async (coinId: string): Promise<CoinGeckoCoinData> => {
   const url = `https://api.coingecko.com/api/v3/coins/${coinId}`;
@@ -25,7 +42,7 @@ const fetchCoinData = async (coinId: string): Promise<CoinGeckoCoinData> => {
 };
 
 export const useCoinBaseInfo = (coinId: string | null) => {
-  const { data, isLoading, isError, error } = useQuery({
+  const { data, isLoading, isError, error, refetch } = useQuery({
     queryKey: ["coinBaseInfo", coinId],
     queryFn: () => {
       if (!coinId) throw new Error("coinId is required");
@@ -37,21 +54,10 @@ export const useCoinBaseInfo = (coinId: string | null) => {
   });
 
   return {
-    data: data ?? {
-      name: "",
-      image: {
-        small: "https://cdn-icons-png.flaticon.com/512/5978/5978100.png",
-      },
-      market_data: {
-        price_change_24h: "",
-        price_change_percentage_24h: "",
-        low_24h: { usd: "" },
-        high_24h: { usd: "" },
-        total_volume: { usd: "" },
-      },
-    },
+    data: data ?? emptyData,
     loading: isLoading,
     isError,
     error,
+    refetch,
   };
 };

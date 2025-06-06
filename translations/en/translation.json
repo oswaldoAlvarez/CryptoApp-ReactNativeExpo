@@ -18,5 +18,26 @@
     "privacy_security_title": "Privacy & Security",
     "language_title": "Language:",
     "league_participants": "Participants: {{participants}}"
+  },
+  "home": {
+    "first_title": "Today Cryptocurrency prices",
+    "first_subtitle": "The global crypto market cap is $1.999.999",
+    "second_title": "Learn and earn",
+    "second_subtitle": "Stocks is a production-ready library of stackable content blocks built in React Native"
+  },
+  "orderbook": {
+    "placeholder_title": "Search for cryptocurrency...",
+    "all_tag_title": "All",
+    "name_tag_title": "Name",
+    "price_tag_title": "Price",
+    "empty_list": "There are no coins that match your search.",
+    "favorites_tag_title": "Favorites",
+    "empty_favorites": "You have no saved favorites"
+  },
+  "cryptodetail": {
+    "vol_24h": "24h Volume",
+    "24h_change": "24h Change",
+    "24h_low": "24h low",
+    "24h_high": "24h high"
   }
 }

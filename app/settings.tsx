@@ -4,6 +4,7 @@ import {
   TextView,
   ThemeToggleSwitch,
 } from "@/components";
+import { useNavigator } from "@/hooks";
 import { styles } from "@/styles/(tabs)/settings.styles";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "@react-navigation/native";
@@ -13,6 +14,8 @@ import { ScrollView, View } from "react-native";
 export default function SettingsScreen() {
   const { t } = useTranslation();
   const { colors, dark } = useTheme();
+
+  useNavigator(t("setting_title"));
 
   const bgColor = { backgroundColor: dark ? "black" : "white" };
 

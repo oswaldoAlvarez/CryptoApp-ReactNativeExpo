@@ -1,8 +1,20 @@
 import { useCryptoStore } from "@/store/cryptoStore";
 import { useMemo, useState } from "react";
 
-export type OrderType = "all" | "name" | "price";
+export type OrderType = "all" | "name" | "price" | "volume";
 export type OrderDirection = "asc" | "desc";
+
+const ALLOWED_TARGETS = new Set([
+  "USD",
+  "USDT",
+  "USDC",
+  "BUSD",
+  "DAI",
+  "TUSD",
+  "USDP",
+  "USTC",
+  "FDUSD",
+]);
 
 export const useFilteredOrderbook = () => {
   const tickers = useCryptoStore((s) => s.tickers);
@@ -20,7 +32,9 @@ export const useFilteredOrderbook = () => {
   };
 
   const filteredTickers = useMemo(() => {
-    let arr = tickers;
+    let arr = tickers.filter((t) =>
+      ALLOWED_TARGETS.has(t.target.toUpperCase())
+    );
 
     if (search.trim().length > 0) {
       arr = arr.filter(
@@ -43,6 +57,12 @@ export const useFilteredOrderbook = () => {
         .slice()
         .sort((a, b) =>
           direction === "asc" ? b.last - a.last : a.last - b.last
+        );
+    } else if (order === "volume") {
+      arr = arr
+        .slice()
+        .sort((a, b) =>
+          direction === "asc" ? b.volume - a.volume : a.volume - b.volume
         );
     }
 

@@ -56,35 +56,18 @@ function AppContent() {
           <BottomSheetModalProvider>
             <Stack
               screenOptions={{
-                // headerShown: false,
-                // animation: "slide_from_right",
-                // gestureEnabled: true,
                 headerTitleAlign: "center",
               }}
             >
               <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
               <Stack.Screen
                 name="cryptodetail"
-                options={{ headerShown: true }}
+                options={{
+                  headerShown: true,
+                  headerBackVisible: false,
+                }}
               />
-              <Stack.Screen
-                name="settings"
-                // options={({ navigation }) => ({
-                //   // headerShown: true,
-                //   headerLeft: () => (
-                //     <Pressable
-                //       onPress={() => navigation.goBack()}
-                //       style={styles.buttonBack}
-                //     >
-                //       <Ionicons
-                //         name="arrow-back"
-                //         size={24}
-                //         color={navTheme.colors.text}
-                //       />
-                //     </Pressable>
-                //   ),
-                // })}
-              />
+              <Stack.Screen name="settings" />
               <Stack.Screen name="+not-found" />
             </Stack>
             <StatusBar style={theme === "dark" ? "light" : "dark"} />
