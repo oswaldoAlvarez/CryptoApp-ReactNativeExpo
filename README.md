@@ -1,4 +1,4 @@
-# Welcome to your Expo app 👋
+# Welcome to your CryptoApp 👋
 
 ![demo1](https://github.com/user-attachments/assets/0b22df1c-2160-4c07-8a65-ebef73a0b3c9)
 ![demo2](https://github.com/user-attachments/assets/b9337075-a8e4-4903-9446-75dbf4512052)
