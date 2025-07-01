@@ -1,10 +1,11 @@
 # Welcome to your CryptoApp 👋
 
 ![demooNE](https://github.com/user-attachments/assets/31bf7e16-7d5b-491d-b306-22f8fd2b7187)
-![demo2](https://github.com/user-attachments/assets/b9337075-a8e4-4903-9446-75dbf4512052)
-![demo3](https://github.com/user-attachments/assets/e26305bc-dfba-4358-826f-59e2b567a039)
-![demo4](https://github.com/user-attachments/assets/3558ab8f-0ec9-49b3-b3c6-94e5104017a4)
-![demo5](https://github.com/user-attachments/assets/287ee31f-23a1-4df3-b294-fc75455b6963)
+![demoTwo](https://github.com/user-attachments/assets/0200d2d0-f9c6-4bd0-bc53-d790c332d4ba)
+![demoTree](https://github.com/user-attachments/assets/212510bb-bf3b-49ca-ba33-54ef6683db45)
+![demoFour](https://github.com/user-attachments/assets/5fcfe4a8-e81c-49cf-b7df-165b0cba8259)
+![demoFive](https://github.com/user-attachments/assets/05b9d3e2-8597-4127-9976-a93cb9aa1336)
+
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
